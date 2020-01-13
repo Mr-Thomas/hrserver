@@ -9,6 +9,7 @@ import org.sang.factory.KafkaConsumerFactory;
 import org.sang.kafka.KafkaProducerSevice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.kafka.core.KafkaAdmin;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -21,20 +22,20 @@ public class KafkaTest {
 
     @Test
     public void produceTest(){
-        kafkaProducerSevice.sendMsg("test","hahaahhahaha");
+        kafkaProducerSevice.sendMsg("test","01");
     }
 
     @Test
     public void consumerTest(){
         KafkaConsumer<String, String> consumer = KafkaConsumerFactory.getInstance().getKafkaConsumer("test","11");
-        ConsumerRecords<String, String> records = consumer.poll(1000L);
         while (true){
+            ConsumerRecords<String, String> records = consumer.poll(1000L);
             if(records.isEmpty()){
                 log.info("未从topic：{}，中取到消息","test");
                 continue;
             }
             records.forEach(o ->{
-                log.info("消息：{}",o.value());
+                log.info("消息:{}",o.value());
             });
             consumer.commitAsync();
         }
