@@ -40,7 +40,7 @@ public class KafkaProducerSevice {
      * @param msg
      */
     public void sendMsg(String topic,String msg){
-        ProducerRecord<String, String> record = new ProducerRecord<>(topic, "", msg);
+        ProducerRecord<String, String> record = new ProducerRecord<>(topic,null, msg);
         try {
             producer.send(record);
         } catch (Exception e) {
