@@ -23,30 +23,30 @@ public class SocketIOConfig {
     @Value("${socket.io.port}")
     private Integer port;
 
-    @Value("${socket.io.bossCount}")
+//    @Value("${socket.io.bossCount}")
     private int bossCount = 1;
 
-    @Value("${socket.io.workCount}")
+//    @Value("${socket.io.workCount}")
     private int workCount = 100;
 
-    @Value("${socket.io.allowCustomRequests}")
+//    @Value("${socket.io.allowCustomRequests}")
     private boolean allowCustomRequests;
     /**
      * 协议升级超时时间（ms），默认10秒。HTTP握手升级为ws协议超时时间
      */
-    @Value("${socket.io.upgradeTimeout}")
+//    @Value("${socket.io.upgradeTimeout}")
     private int upgradeTimeout = 1000000;
 
     /**
      * Ping消息超时时间（毫秒），默认60秒，这个时间间隔内没有接收到心跳消息就会发送超时事件
      */
-    @Value("${socket.io.pingTimeout}")
+//    @Value("${socket.io.pingTimeout}")
     private int pingTimeout = 6000000;
 
     /**
      * Ping消息间隔（毫秒），默认25秒。客户端向服务器发送一条心跳消息间隔
      */
-    @Value("${socket.io.pingInterval}")
+//    @Value("${socket.io.pingInterval}")
     private int pingInterval = 25000;
 
     @Bean("socketServer")

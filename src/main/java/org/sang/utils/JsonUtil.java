@@ -15,6 +15,7 @@ import java.io.IOException;
 /**
  * @Author: Mr-Thomas
  * @Date: 2020/1/14 18:07
+ * JSON与POJO转换工具类.
  */
 @Slf4j
 public class JsonUtil {

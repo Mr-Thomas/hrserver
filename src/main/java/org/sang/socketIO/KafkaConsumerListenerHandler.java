@@ -11,6 +11,7 @@ import java.util.Collection;
 /**
  * @Author: Mr-Thomas
  * @Date: 2020/1/14 17:14
+ * @Description: 启动和停止由@KafkaListener注册的kafka consumer
  */
 @Component
 @Slf4j
