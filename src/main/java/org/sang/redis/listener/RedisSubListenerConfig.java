@@ -1,4 +1,4 @@
-package org.sang.listener;
+package org.sang.redis.listener;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

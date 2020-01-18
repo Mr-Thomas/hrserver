@@ -1,4 +1,4 @@
-package org.sang.listener;
+package org.sang.redis.listener;
 
 import lombok.extern.slf4j.Slf4j;
 import org.sang.bean.RedisMessageVo;

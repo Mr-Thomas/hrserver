@@ -46,6 +46,6 @@ public class KafkaProducerSevice {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        producer.close();
+//        producer.close();
     }
 }
