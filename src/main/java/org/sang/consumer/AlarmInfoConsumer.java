@@ -24,7 +24,7 @@ public class AlarmInfoConsumer {
     public void processMessage(ConsumerRecord<String, String> consumerRecord) {
         String value = consumerRecord.value();
         try {
-            log.info("收到布控报警kafka消息！");
+            log.info("预警topic:{}; kafkaKey:{}; 收到报警kafka消息:{};",consumerRecord.topic(),consumerRecord.key(),consumerRecord.value());
             redisUtil.convertAndSend("socketIoMessage", value);
         } catch (Exception e) {
             log.error("device DeviceMsgConsumer processMessage exception ", e);
